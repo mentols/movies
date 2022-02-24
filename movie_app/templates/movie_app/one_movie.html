@@ -1,0 +1,11 @@
+{% extends 'movie_app/base.html' %}
+
+{% block title %}{{ movie.name }}{% endblock %}
+
+
+{% block content %}
+    <h2>Информация о фильме: {{ movie.name }}</h2>
+    {{ movie }}
+    <br>
+    <a href="{% url 'start' %}">Back to menu</a>
+{% endblock %}

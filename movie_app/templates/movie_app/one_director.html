@@ -1,0 +1,17 @@
+{% block title %} {% endblock %}
+
+{% block content %}
+    <h1>Режиссёр</h1>
+    <h2> {{ director.first_name }} {{ director.last_name }} </h2>
+    <h3>Личный e-mail: {{ director.director_email }}</h3>
+    <h2>id: {{ director.id }}</h2>
+
+        <p>{{ director }}</p>
+    <hr>
+    <a href="{% url 'all_dirs' %}">Back to menu directors</a>
+    <hr>
+    {% for film in director.movies.all %}
+        <li>{{ film }}</li>
+    {% endfor %}
+{% endblock %}
+
